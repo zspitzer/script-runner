@@ -78,6 +78,12 @@
 							SystemOutput( "No *.lex extension files found in directory [#extensionDir#], directory exists: [#DirectoryExists(extensionDir)#]", true );
 					}
 
+					systemoutput("--------- Installed Extensions -------", true);
+					q_ext = extensionList();
+					loop query="q_ext"{
+						systemoutput("#q_ext.name#, #q_ext.version#", true);
+					}
+
 
 					systemOutput( "-------------- Lucee Initialized --------------", true );
 					systemOutput( "", true );
