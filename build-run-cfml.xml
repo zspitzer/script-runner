@@ -56,7 +56,7 @@
 
 					systemOutput( "-------------- Mappings --------------", true );
 					loop query="mappings" {
-						systemOutput("#mappings.virtual# #chr( 9 )# #mappings.strPhysical# "
+						systemOutput("#mappings.virtual# #chr( 9 )# #mappings.strPhysical# (Exists: #DirectoryExists(mappings.strPhysical)#)"
 							& ( len( mappings.strArchive ) ? "[#mappings.strArchive#] " : "" )
 							& ( len( mappings.inspect ) ? "(#mappings.inspect#)" : ""), true );
 					}
