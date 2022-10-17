@@ -26,5 +26,5 @@ runs:
         echo execute ${{ inputs.execute }}
         echo extensions ${{ inputs.extensions }}
         echo extensionDir ${{ inputs.extensionDir }}
-        ant -debug -buildfile "${{ github.action_path }}/build.xml" -DluceeVersion="${{ inputs.luceeVersion }}" -Dwebroot="${{ inputs.webroot }}" -Dexecute="${{ inputs.execute }}" -DextensionDir="${{ inputs.extensionDir }}" -Dextensions="${{ inputs.extensions }}"
+        ant -verbose -buildfile "${{ github.action_path }}/build.xml" -DluceeVersion="${{ inputs.luceeVersion }}" -Dwebroot="${{ inputs.webroot }}" -Dexecute="${{ inputs.execute }}" -DextensionDir="${{ inputs.extensionDir }}" -Dextensions="${{ inputs.extensions }}"
       shell: bash
